@@ -70,5 +70,9 @@ def chat():
     response = chatbot_response(message)
     return jsonify({'response': response})
 
+@app.route("/")
+def start():
+    return "Server is Running"
+
 if __name__ == '__main__':
     app.run(debug=True)
